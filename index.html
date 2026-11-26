@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8:45 AM: The Demo Rush | Interactive Story Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <!-- Top Header & Live State HUD -->
+    <header class="game-header">
+      <div class="title-group">
+        <span class="badge">CAMPUS COMEDY EDITION</span>
+        <h1>8:45 AM: The Demo Rush</h1>
+      </div>
+
+      <div class="hud-stats">
+        <div class="stat-box">
+          <span class="stat-label">CLOCK</span>
+          <span id="clock-display" class="stat-value">08:45 AM</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">STRESS</span>
+          <span id="stress-display" class="stat-value">20%</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Inventory / Items Bar -->
+    <section class="inventory-bar">
+      <span class="inv-title">Backpack:</span>
+      <div id="inventory-list" class="inv-items">
+        <span class="empty-inv">Empty (Grab your stuff!)</span>
+      </div>
+    </section>
+
+    <!-- Main Story Card -->
+    <main class="story-card">
+      <div class="scene-meta">
+        <span id="location-tag" class="location-tag">📍 Hostel Room 404</span>
+        <span id="ending-badge" class="ending-badge hidden">ENDING UNLOCKED</span>
+      </div>
+
+      <h2 id="scene-title" class="scene-title">The Alarm Betrayal</h2>
+      <p id="scene-text" class="scene-text">Loading story...</p>
+
+      <!-- Dynamic Choice Buttons -->
+      <div id="choices-container" class="choices-container"></div>
+    </main>
+
+    <!-- Footer Controls -->
+    <footer class="game-footer">
+      <div class="footer-left">
+        <button id="restart-btn" class="control-btn secondary">↻ Restart Story</button>
+        <button id="clear-save-btn" class="control-btn danger">Clear Saved Progress</button>
+      </div>
+      <span id="save-status" class="save-status">Auto-saved to browser</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
